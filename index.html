@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akarsh Raj - Full-Stack Developer & AI Integrator</title>
+  <meta name="description" content="Portfolio of Akarsh Raj, Full-Stack Developer specializing in AI-integrated web applications. Expert in Next.js, MERN, and AI Integration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <!-- Ambient Backgrounds -->
+  <div id="tsparticles"></div>
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar glass">
+    <div class="nav-content container">
+      <a href="#" class="logo">AR<span class="accent">.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Arsenal</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="btn btn-outline nav-btn">Let's Connect</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-text reveal">
+        <div class="status-badge glass">
+          <span class="pulse"></span> Available for new opportunities
+        </div>
+        <h1 class="headline">Engineering the <br><span class="gradient-text">Future of AI-Driven</span> <br>Web Solutions.</h1>
+        <p class="sub-headline">Full-Stack Developer | Next.js & MERN Expert | AI Integrator</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-secondary">Let's Connect <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay">
+        <div class="glass-card stats-card main-stat">
+          <i data-lucide="code-2" class="stat-icon"></i>
+          <div class="stat-info">
+            <h3>300+</h3>
+            <p>DSA Problems Solved</p>
+          </div>
+        </div>
+        <div class="glass-card stats-card sub-stat float-1">
+          <i data-lucide="brain-circuit" class="stat-icon accent-icon"></i>
+          <div class="stat-info">
+            <h4>IIT Roorkee</h4>
+            <p>AIML Certified</p>
+          </div>
+        </div>
+        <div class="glass-card stats-card sub-stat float-2">
+          <i data-lucide="shield-check" class="stat-icon accent-icon"></i>
+          <div class="stat-info">
+            <h4>Ethical Hacker</h4>
+            <p>Certified</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Floating Decor for Parallax -->
+  <div class="parallax-wrap">
+    <div class="floating-shape shape-1" data-speed="2"></div>
+    <div class="floating-shape shape-2" data-speed="-1.5"></div>
+    <div class="floating-shape shape-3" data-speed="1"></div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about glass-section" id="about">
+    <div class="container about-content">
+      <div class="about-text reveal">
+        <h2 class="section-title">Beyond the <span class="accent">Code</span></h2>
+        <p>I am a passionate <strong>Full-Stack Developer</strong> and an AI enthusiast currently pursuing my B.Tech in CSE at Roorkee Institute of Technology. I specialize in merging robust backend architectures (like Spring Boot and Node.js) with highly interactive frontend experiences (Next.js, React) to build scalable SaaS products.</p>
+        <p>My journey involves tackling complex algorithms (300+ DSA problems solved) and exploring cutting-edge AI integrations like OpenAI APIs and Retrieval-Augmented Generation (RAG). I believe in clean code, user-centric design, and continuous learning.</p>
+      </div>
+      <div class="about-visual reveal reveal-delay">
+        <div class="glass-card about-card magnetic">
+          <i data-lucide="cpu" class="about-icon pulse-glow"></i>
+          <h3>AI-First Approach</h3>
+          <p>Integrating intelligence into web systems to elevate user experiences beyond traditional boundaries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creative Process Section (Horizontal Scroll) -->
+  <section class="process" id="process">
+    <div class="process-bg-glow"></div>
+    <div class="process-sticky">
+      <div class="process-header">
+        <h2 class="section-title"><span class="accent">Architecture</span> Protocol</h2>
+        <p>A scroll-driven journey through my engineering lifecycle.</p>
+      </div>
+      <div class="process-track">
+        <!-- Connecting Line SVG -->
+        <svg class="process-connection-line" viewBox="0 0 2000 100" preserveAspectRatio="none">
+           <path class="connection-path" d="M 0,50 Q 250,5 500,50 T 1000,50 T 1500,50 T 2000,50" fill="none" stroke="url(#gradient)" stroke-width="4"></path>
+           <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                 <stop offset="0%" stop-color="#0070f3" />
+                 <stop offset="50%" stop-color="#10b981" />
+                 <stop offset="100%" stop-color="#7928ca" />
+              </linearGradient>
+           </defs>
+        </svg>
+
+        <div class="process-card glass magnetic" data-index="0">
+          <div class="process-num">01</div>
+          <h3 class="scramble-text" data-text="Ideation & Strategy">Ideation & Strategy</h3>
+          <p>Mapping out user workflows, defining schema definitions, and identifying where AI models can eliminate bottlenecks.</p>
+          <i data-lucide="lightbulb" class="process-icon pulse-glow"></i>
+        </div>
+
+        <div class="process-card glass magnetic" data-index="1">
+          <div class="process-num">02</div>
+          <h3 class="scramble-text" data-text="System Design">System Design</h3>
+          <p>Architecting the database and API layers with scalable microservices or monolith architectures like Spring Boot & Node.js.</p>
+          <i data-lucide="network" class="process-icon pulse-glow"></i>
+        </div>
+
+        <div class="process-card glass magnetic" data-index="2">
+          <div class="process-num">03</div>
+          <h3 class="scramble-text" data-text="AI Integration">AI Integration</h3>
+          <p>Wiring up LLMs, generating embeddings, and constructing Retrieval-Augmented Generation (RAG) pipelines for intelligent capabilities.</p>
+          <i data-lucide="brain-circuit" class="process-icon pulse-glow"></i>
+        </div>
+
+        <div class="process-card glass magnetic" data-index="3">
+          <div class="process-num">04</div>
+          <h3 class="scramble-text" data-text="Tactile Frontend">Tactile Frontend</h3>
+          <p>Building highly interactive, motion-rich user interfaces with React, Next.js, and pure CSS physics logic.</p>
+          <i data-lucide="panels-top-left" class="process-icon pulse-glow"></i>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">The <span class="accent">Showstoppers</span></h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <article class="project-card glass reveal">
+          <div class="project-image-wrapper">
+             <div class="project-placeholder genweb-bg">
+                <i data-lucide="layout-template" class="placeholder-icon"></i>
+             </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">AI Builder</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Stripe</span>
+            </div>
+            <h3>GenWeb.ai</h3>
+            <p>A full-fledged SaaS platform allowing users to generate and edit websites instantly via AI prompts. Features a drag-and-drop live preview editor, Stripe for subscription management, and Clerk for authentication. Built with Next.js App Router for optimal performance and SEO.</p>
+            <div class="project-links">
+              <a href="https://github.com/akarshra/WebsiteBuilder" target="_blank" rel="noopener noreferrer" class="project-link"><i data-lucide="github"></i> Code</a>
+              <a href="https://websitebuilder-1-vyar.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link primary"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass reveal reveal-delay">
+          <div class="project-image-wrapper">
+             <div class="project-placeholder interviewiq-bg">
+                <i data-lucide="users" class="placeholder-icon"></i>
+             </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">OpenAI API</span>
+              <span class="tag">React</span>
+              <span class="tag">JWT auth</span>
+            </div>
+            <h3>InterviewIQ</h3>
+            <p>A platform designed to simulate rigorous technical and behavioral interviews. Leverages the OpenAI API to analyze user responses and provide actionable feedback. Implements secure JWT authentication workflows and a rich React dashboard for tracking progress.</p>
+            <div class="project-links">
+              <a href="https://github.com/akarshra/interviewIQ" target="_blank" rel="noopener noreferrer" class="project-link"><i data-lucide="github"></i> Code</a>
+              <a href="https://interviewiq-client.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link primary"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Arsenal Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Technical <span class="accent">Arsenal</span></h2>
+      <div class="skills-grid reveal">
+        
+        <div class="skill-category glass">
+          <div class="category-header">
+            <i data-lucide="terminal" class="category-icon"></i>
+            <h3>Languages</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
+            <li><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
+            <li><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-category glass">
+          <div class="category-header">
+            <i data-lucide="layout" class="category-icon"></i>
+            <h3>Frontend</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">React</span><div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div></li>
+            <li><span class="skill-name">Next.js</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
+            <li><span class="skill-name">TypeScript</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-category glass">
+          <div class="category-header">
+            <i data-lucide="database" class="category-icon"></i>
+            <h3>Backend & DB</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">Node.js</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
+            <li><span class="skill-name">MongoDB</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
+            <li><span class="skill-name">Spring Boot</span><div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div></li>
+            <li><span class="skill-name">Prisma</span><div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="timeline-container">
+        <div class="timeline-column reveal">
+          <h2 class="section-title"><i data-lucide="briefcase"></i> Experience</h2>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <h3>Lakshya IT Solutions</h3>
+            <h4>Software Engineering Intern</h4>
+            <p class="timeline-date">Recent</p>
+            <p class="timeline-desc">Focused on building dynamic responsive interfaces and integrating complex GraphQL APIs. Optimized component rendering performance and maintained clean architecture.</p>
+          </div>
+        </div>
+
+        <div class="timeline-column reveal reveal-delay">
+          <h2 class="section-title"><i data-lucide="graduation-cap"></i> Education</h2>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <h3>Roorkee Institute of Technology</h3>
+            <h4>B.Tech in Computer Science and Engineering</h4>
+            <p class="timeline-date">Class of 2026</p>
+            <p class="timeline-desc">Specialized in AI/ML. Active participant in coding clubs and hackathons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-card glass reveal">
+        <div class="contact-info">
+          <h2>Let's build something <span class="accent">extraordinary.</span></h2>
+          <p>Currently open for new opportunities, collaborations, and freelance projects.</p>
+          
+          <div class="social-links">
+            <a href="https://github.com/akarshra" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com/in/akarsh-raj25" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:akarsh@example.com" class="social-btn" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required class="form-input" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required class="form-input" placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" required class="form-input" rows="4" placeholder="How can we collaborate?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Send Message <i data-lucide="send"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer container">
+    <p>&copy; 2026 Akarsh Raj. Built with precision and AI.</p>
+  </footer>
+
+  <!-- Particles & Custom Cursor Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-stars@2/tsparticles.preset.stars.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Initialize Particles
+    tsParticles.load("tsparticles", {
+      preset: "stars",
+      background: {
+        color: { value: "transparent" }
+      },
+      particles: {
+        number: { value: 80 },
+        color: { value: ["#0070f3", "#7928ca", "#ffffff"] },
+        links: {
+          enable: true,
+          color: "rgba(255,255,255,0.05)",
+          distance: 150
+        },
+        move: { speed: 0.5, enable: true }
+      }
+    });
+  </script>
+</body>
+</html>
