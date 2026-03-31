@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursorOutline = document.querySelector('[data-cursor-outline]');
   const interactables = document.querySelectorAll('a, button, input, textarea, .project-card, .skill-category');
 
+  const allCards = document.querySelectorAll('.glass, .glass-card, .project-card, .skill-category, .timeline-item');
+
   window.addEventListener('mousemove', (e) => {
     const posX = e.clientX;
     const posY = e.clientY;
@@ -109,6 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
       left: `${posX}px`,
       top: `${posY}px`
     }, { duration: 500, fill: "forwards" });
+
+    // Premium Card Spotlight Glow
+    allCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
   });
 
   interactables.forEach(el => {
@@ -247,6 +258,106 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.remove('active-center');
         }
       });
+    });
+  }
+
+  /* =========================================
+     Human-Crafted 3D Background (Three.js)
+     ========================================= */
+  const canvas = document.getElementById('bg-canvas');
+  if (canvas && typeof THREE !== 'undefined') {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Create particles
+    const particlesCount = 700;
+    const posArray = new Float32Array(particlesCount * 3);
+    const colorsArray = new Float32Array(particlesCount * 3);
+
+    const color1 = new THREE.Color('#0070f3'); // accent-blue
+    const color2 = new THREE.Color('#7928ca'); // purple
+    const color3 = new THREE.Color('#10b981'); // emerald
+
+    for(let i = 0; i < particlesCount * 3; i+=3) {
+      // Spread particles in a wide area
+      posArray[i] = (Math.random() - 0.5) * 20;     // x
+      posArray[i+1] = (Math.random() - 0.5) * 20;   // y
+      posArray[i+2] = (Math.random() - 0.5) * 15;   // z
+
+      // Mix colors
+      const randColor = Math.random();
+      let mixedColor = color1;
+      if (randColor > 0.66) mixedColor = color2;
+      else if (randColor > 0.33) mixedColor = color3;
+
+      colorsArray[i] = mixedColor.r;
+      colorsArray[i+1] = mixedColor.g;
+      colorsArray[i+2] = mixedColor.b;
+    }
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colorsArray, 3));
+
+    // Particle Material
+    const material = new THREE.PointsMaterial({
+      size: 0.03,
+      vertexColors: true,
+      transparent: true,
+      opacity: 0.8,
+      blending: THREE.AdditiveBlending
+    });
+
+    const particlesMesh = new THREE.Points(geometry, material);
+    scene.add(particlesMesh);
+
+    camera.position.z = 5;
+
+    // Mouse Interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+    const windowHalfX = window.innerWidth / 2;
+    const windowHalfY = window.innerHeight / 2;
+
+    document.addEventListener('mousemove', (event) => {
+      mouseX = (event.clientX - windowHalfX);
+      mouseY = (event.clientY - windowHalfY);
+    });
+
+    // Animation Loop
+    const clock = new THREE.Clock();
+
+    const tick = () => {
+      const elapsedTime = clock.getElapsedTime();
+
+      // Gentle continuous rotation
+      particlesMesh.rotation.y = elapsedTime * 0.05;
+      particlesMesh.rotation.x = elapsedTime * 0.02;
+
+      // Smooth mouse parallax effect
+      targetX = mouseX * 0.001;
+      targetY = mouseY * 0.001;
+      
+      particlesMesh.rotation.y += 0.05 * (targetX - particlesMesh.rotation.y);
+      particlesMesh.rotation.x += 0.05 * (targetY - particlesMesh.rotation.x);
+
+      renderer.render(scene, camera);
+      window.requestAnimationFrame(tick);
+    };
+
+    tick();
+
+    // Responsive window resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
     });
   }
 

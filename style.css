@@ -109,7 +109,7 @@ body::before {
 }
 
 /* Ambient Background Blobs & Particles */
-#tsparticles {
+#bg-canvas {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   z-index: -3;
@@ -216,6 +216,22 @@ button {
   position: absolute;
   top: 0; left: 0; right: 0; height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Premium Mouse Spotlight Edge Glow */
+.glass::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(400px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(255, 255, 255, 0.08), transparent 40%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glass:hover::after {
+  opacity: 1;
 }
 
 .section-title {
@@ -804,6 +820,30 @@ section {
   flex-grow: 1;
 }
 
+.project-bullets {
+  list-style-type: none;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.project-bullets li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.project-bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+}
+.project-bullets strong {
+  color: var(--text-main);
+}
+
 .project-links {
   display: flex;
   gap: 1rem;
@@ -828,6 +868,26 @@ section {
 
 .project-link.primary:hover {
   text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Inline text links for body */
+.text-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0, 112, 243, 0.4);
+  transition: var(--transition-smooth);
+}
+.text-link:hover {
+  text-shadow: 0 0 8px var(--accent-glow);
+  border-bottom-style: solid;
+  border-bottom-color: var(--accent-blue);
+}
+.inline-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2px;
 }
 
 /* Skills Section */
@@ -872,6 +932,20 @@ section {
 
 .skill-list li:last-child {
   margin-bottom: 0;
+}
+
+.skill-list.flat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-list.flat-list li {
+  margin-bottom: 0;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 0.85rem;
 }
 
 .skill-name {
@@ -970,6 +1044,31 @@ section {
   font-size: 0.95rem;
 }
 
+.timeline-desc-list {
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+.timeline-desc-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.timeline-desc-list li::before {
+  content: '•';
+  color: var(--accent-blue);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.timeline-desc-list strong {
+  color: var(--text-main);
+}
+
 /* Contact Section */
 .contact-card {
   padding: 4rem;
@@ -995,18 +1094,22 @@ section {
 .social-links {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-btn {
-  width: 48px;
+  padding: 0 1.2rem;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-light);
   transition: var(--transition-smooth);
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .social-btn:hover {

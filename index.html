@@ -17,7 +17,7 @@
   <div class="cursor-outline" data-cursor-outline></div>
 
   <!-- Ambient Backgrounds -->
-  <div id="tsparticles"></div>
+  <canvas id="bg-canvas"></canvas>
   <div class="background-blobs">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
@@ -50,7 +50,7 @@
         <div class="status-badge glass">
           <span class="pulse"></span> Available for new opportunities
         </div>
-        <h1 class="headline">Engineering the <br><span class="gradient-text">Future of AI-Driven</span> <br>Web Solutions.</h1>
+        <h1 class="headline">Hi, I'm <span class="gradient-text">Akarsh Raj</span>.<br>Engineering the Future of <br>AI-Driven Web Solutions.</h1>
         <p class="sub-headline">Full-Stack Developer | Next.js & MERN Expert | AI Integrator</p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View My Projects</a>
@@ -165,32 +165,10 @@
   <section class="projects" id="projects">
     <div class="container">
       <h2 class="section-title reveal">The <span class="accent">Showstoppers</span></h2>
-      <div class="projects-grid">
+      <div class="projects-grid"><div class="projects-grid">
         
         <!-- Project 1 -->
         <article class="project-card glass reveal">
-          <div class="project-image-wrapper">
-             <div class="project-placeholder genweb-bg">
-                <i data-lucide="layout-template" class="placeholder-icon"></i>
-             </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span class="tag">AI Builder</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Stripe</span>
-            </div>
-            <h3>GenWeb.ai</h3>
-            <p>A full-fledged SaaS platform allowing users to generate and edit websites instantly via AI prompts. Features a drag-and-drop live preview editor, Stripe for subscription management, and Clerk for authentication. Built with Next.js App Router for optimal performance and SEO.</p>
-            <div class="project-links">
-              <a href="https://github.com/akarshra/WebsiteBuilder" target="_blank" rel="noopener noreferrer" class="project-link"><i data-lucide="github"></i> Code</a>
-              <a href="https://websitebuilder-1-vyar.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link primary"><i data-lucide="external-link"></i> Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card glass reveal reveal-delay">
           <div class="project-image-wrapper">
              <div class="project-placeholder interviewiq-bg">
                 <i data-lucide="users" class="placeholder-icon"></i>
@@ -198,15 +176,53 @@
           </div>
           <div class="project-content">
             <div class="project-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Firebase</span>
               <span class="tag">OpenAI API</span>
-              <span class="tag">React</span>
-              <span class="tag">JWT auth</span>
             </div>
             <h3>InterviewIQ</h3>
-            <p>A platform designed to simulate rigorous technical and behavioral interviews. Leverages the OpenAI API to analyze user responses and provide actionable feedback. Implements secure JWT authentication workflows and a rich React dashboard for tracking progress.</p>
+            <ul class="project-bullets">
+              <li>Engineered an <strong>AI-powered mock interview platform</strong> that dynamically generates resume-based interview questions and delivers structured feedback using OpenAI API.</li>
+              <li>Implemented <strong>JWT-based</strong> authentication and <strong>Firebase Google Auth</strong>, along with a credit-based usage system for controlled AI access.</li>
+              <li>Designed and deployed a scalable <strong>MERN stack application</strong> on Render, ensuring secure API handling and optimized performance.</li>
+            </ul>
             <div class="project-links">
               <a href="https://github.com/akarshra/interviewIQ" target="_blank" rel="noopener noreferrer" class="project-link"><i data-lucide="github"></i> Code</a>
               <a href="https://interviewiq-client.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link primary"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass reveal reveal-delay">
+          <div class="project-image-wrapper">
+             <div class="project-placeholder genweb-bg">
+                <i data-lucide="layout-template" class="placeholder-icon"></i>
+             </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">Framer Motion</span>
+              <span class="tag">OpenRouter AI</span>
+            </div>
+            <h3>GenWeb.ai</h3>
+            <ul class="project-bullets">
+              <li>Built an <strong>AI-driven website</strong> builder capable of generating fully responsive, production-ready websites using OpenRouter AI.</li>
+              <li>Integrated <strong>Stripe payment</strong> gateway with a credit-based SaaS model, enabling secure transactions and user subscription handling.</li>
+              <li>Developed a full-stack <strong>MERN architecture</strong> with live preview and editing capabilities for dynamic website customization.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/akarshra/WebsiteBuilder" target="_blank" rel="noopener noreferrer" class="project-link"><i data-lucide="github"></i> Code</a>
+              <a href="https://websitebuilder-1-vyar.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link primary"><i data-lucide="external-link"></i> Live Demo</a>
             </div>
           </div>
         </article>
@@ -220,16 +236,13 @@
     <div class="container">
       <h2 class="section-title reveal">Technical <span class="accent">Arsenal</span></h2>
       <div class="skills-grid reveal">
-        
         <div class="skill-category glass">
           <div class="category-header">
             <i data-lucide="terminal" class="category-icon"></i>
             <h3>Languages</h3>
           </div>
-          <ul class="skill-list">
-            <li><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
-            <li><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
-            <li><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div></li>
+          <ul class="skill-list flat-list">
+            <li>Java</li><li>Python</li><li>JavaScript</li><li>SQL</li>
           </ul>
         </div>
 
@@ -238,10 +251,8 @@
             <i data-lucide="layout" class="category-icon"></i>
             <h3>Frontend</h3>
           </div>
-          <ul class="skill-list">
-            <li><span class="skill-name">React</span><div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div></li>
-            <li><span class="skill-name">Next.js</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
-            <li><span class="skill-name">TypeScript</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
+          <ul class="skill-list flat-list">
+            <li>React.js</li><li>Next.js</li><li>Tailwind CSS</li><li>TypeScript</li>
           </ul>
         </div>
 
@@ -250,11 +261,19 @@
             <i data-lucide="database" class="category-icon"></i>
             <h3>Backend & DB</h3>
           </div>
-          <ul class="skill-list">
-            <li><span class="skill-name">Node.js</span><div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div></li>
-            <li><span class="skill-name">MongoDB</span><div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div></li>
-            <li><span class="skill-name">Spring Boot</span><div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div></li>
-            <li><span class="skill-name">Prisma</span><div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div></li>
+          <ul class="skill-list flat-list">
+            <li>Node.js</li><li>Express.js</li><li>REST API</li><li>Spring Boot</li><li>Prisma</li><li>GraphQL</li>
+            <li>MongoDB</li><li>MySQL</li><li>PostgreSQL (Supabase)</li>
+          </ul>
+        </div>
+
+        <div class="skill-category glass">
+          <div class="category-header">
+            <i data-lucide="wrench" class="category-icon"></i>
+            <h3>Tools</h3>
+          </div>
+          <ul class="skill-list flat-list">
+            <li>Git</li><li>GitHub</li><li>VS Code</li><li>Firebase</li><li>Supabase</li>
           </ul>
         </div>
 
@@ -267,26 +286,53 @@
     <div class="container">
       <div class="timeline-container">
         <div class="timeline-column reveal">
-          <h2 class="section-title"><i data-lucide="briefcase"></i> Experience</h2>
-          <div class="timeline-item glass">
-            <div class="timeline-dot"></div>
-            <h3>Lakshya IT Solutions</h3>
-            <h4>Software Engineering Intern</h4>
-            <p class="timeline-date">Recent</p>
-            <p class="timeline-desc">Focused on building dynamic responsive interfaces and integrating complex GraphQL APIs. Optimized component rendering performance and maintained clean architecture.</p>
-          </div>
-        </div>
-
-        <div class="timeline-column reveal reveal-delay">
           <h2 class="section-title"><i data-lucide="graduation-cap"></i> Education</h2>
           <div class="timeline-item glass">
             <div class="timeline-dot"></div>
             <h3>Roorkee Institute of Technology</h3>
-            <h4>B.Tech in Computer Science and Engineering</h4>
-            <p class="timeline-date">Class of 2026</p>
-            <p class="timeline-desc">Specialized in AI/ML. Active participant in coding clubs and hackathons.</p>
+            <h4>Bachelor of Technology in Computer Science Engineering</h4>
+            <p class="timeline-date">September 2022 – June 2026 | Roorkee, Uttarakhand</p>
+          </div>
+
+          <h2 class="section-title" style="margin-top: 3rem;"><i data-lucide="briefcase"></i> Experience</h2>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <h3>Full Stack Developer</h3>
+            <h4>Lakshya Internship Program by Explorin Academy</h4>
+            <p class="timeline-date">July 2025 - September 2025 | Remote</p>
+            <ul class="timeline-desc-list">
+              <li>Acquired comprehensive knowledge of HTML, CSS, and JavaScript, building a strong foundation in responsive web design and interactive user interfaces.</li>
+              <li>Gained practical experience with Next.js by developing and deploying multiple projects, focusing on modern web application structure, performance optimization, and best practices.</li>
+              <li>Learned and implemented Prisma ORM for database management and GraphQL for building efficient, scalable APIs, improving overall backend integration.</li>
+            </ul>
           </div>
         </div>
+
+        <div class="timeline-column reveal reveal-delay">
+          <h2 class="section-title"><i data-lucide="users"></i> Leadership</h2>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <h3>Co-Coordinator</h3>
+            <h4>Uttprerna - Social Club | Roorkee Institute of Technology</h4>
+            <p class="timeline-date">September 2023 - Present</p>
+            <ul class="timeline-desc-list">
+              <li>Organized and coordinated multiple cultural and social events to foster student interaction and campus engagement.</li>
+              <li>Promoted community service initiatives, encouraging active participation among peers for social impact.</li>
+              <li>Collaborated with faculty and student members to build teamwork, leadership, and communication skills.</li>
+            </ul>
+          </div>
+
+          <h2 class="section-title" style="margin-top: 3rem;"><i data-lucide="award"></i> Achievements</h2>
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <ul class="timeline-desc-list">
+              <li>Solved 250+ Data Structures and Algorithms problems on <a href="#" target="_blank" rel="noopener noreferrer" class="text-link"><strong>LeetCode</strong> <i data-lucide="external-link" class="inline-icon"></i></a>, covering topics such as Dynamic Programming, Graphs, Trees, and Recursion.</li>
+              <li>Completed an <strong>Ethical Hacking certification</strong> program by Ethical Edufabrica Pvt. Ltd. in association with DTU Cultural Council, covering cybersecurity fundamentals.</li>
+              <li>Earned a <a href="#" target="_blank" rel="noopener noreferrer" class="text-link"><strong>AIML workshop certification</strong> <i data-lucide="external-link" class="inline-icon"></i></a> from Cognizance, IIT Roorkee, conducted in collaboration with IBM, gaining practical exposure to AIML.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -300,9 +346,9 @@
           <p>Currently open for new opportunities, collaborations, and freelance projects.</p>
           
           <div class="social-links">
-            <a href="https://github.com/akarshra" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub"><i data-lucide="github"></i></a>
-            <a href="https://linkedin.com/in/akarsh-raj25" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:akarsh@example.com" class="social-btn" aria-label="Email"><i data-lucide="mail"></i></a>
+            <a href="https://github.com/akarshra" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub"><i data-lucide="github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/akarsh-raj25" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i> LinkedIn</a>
+            <a href="mailto:akarshraj2525@gmail.com" class="social-btn" aria-label="Email"><i data-lucide="mail"></i> Email</a>
           </div>
         </div>
 
@@ -329,30 +375,12 @@
     <p>&copy; 2026 Akarsh Raj. Built with precision and AI.</p>
   </footer>
 
-  <!-- Particles & Custom Cursor Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-stars@2/tsparticles.preset.stars.bundle.min.js"></script>
+  <!-- Three.js & Custom Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
   <script>
     // Initialize Lucide icons
     lucide.createIcons();
-    
-    // Initialize Particles
-    tsParticles.load("tsparticles", {
-      preset: "stars",
-      background: {
-        color: { value: "transparent" }
-      },
-      particles: {
-        number: { value: 80 },
-        color: { value: ["#0070f3", "#7928ca", "#ffffff"] },
-        links: {
-          enable: true,
-          color: "rgba(255,255,255,0.05)",
-          distance: 150
-        },
-        move: { speed: 0.5, enable: true }
-      }
-    });
   </script>
 </body>
 </html>
