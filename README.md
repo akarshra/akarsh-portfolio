@@ -1,10 +1,13 @@
 # 🚀 Akarsh Portfolio
 
 Welcome to my personal developer portfolio repository.  
-This portfolio showcases my projects, technical skills, and experience as a software developer.
+This portfolio showcases my **projects, technical skills, and experience** as a Software Developer.
 
 🔗 **Repository Link:**  
-https://github.com/akarshra/akarsh-portfolio
+https://github.com/akarshra/akarsh-portfolio  
+
+🌐 **Live Demo:**  
+https://akarsh-portfolio-red.vercel.app  
 
 ---
 
@@ -12,46 +15,50 @@ https://github.com/akarshra/akarsh-portfolio
 
 This project is a modern portfolio website designed to highlight my work, skills, and projects in an organized and visually appealing way. It provides an overview of my technical abilities and the projects I have built.
 
-The goal of this portfolio is to create a strong online presence for recruiters, collaborators, and developers.
+The goal of this portfolio is to create a strong online presence for **recruiters, collaborators, and developers**.
 
 ---
 
 ## ✨ Features
 
-- Responsive portfolio website
-- Clean and modern UI
-- Projects showcase section
-- Skills and technologies section
-- Contact section
-- Smooth navigation
+- ✅ Responsive portfolio website  
+- ✅ Clean and modern UI  
+- ✅ Smooth scrolling navigation  
+- ✅ Projects showcase section  
+- ✅ Skills and technologies section  
+- ✅ Experience & education section  
+- ✅ Contact section  
+- ✅ Modern animations and interactive design  
+- ✅ Lightweight and fast performance  
 
 ---
 
 ## 🛠️ Tech Stack
 
-Frontend:
-- HTML5
-- CSS3
-- JavaScript
+### Frontend
+- HTML5  
+- CSS3  
+- JavaScript  
 
-Tools:
-- Git
-- GitHub
-- VS Code
+### Tools & Platforms
+- Git  
+- GitHub  
+- VS Code  
+- Vercel (Deployment)  
 
 ---
 
 ## 📂 Project Structure
 
-```
-akarsh-portfolio
+```bash
+akarsh-portfolio/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 ├── assets/
-│   ├── images
-│   └── icons
+│   ├── images/
+│   └── icons/
 └── README.md
 ```
 
